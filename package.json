@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "sass src/scss/main.scss:dist/dream-team-bs.css && sass --style=compressed --watch src/scss/main.scss:dist/dream-team-bs.min.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
