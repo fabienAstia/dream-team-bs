@@ -12,9 +12,9 @@ Custom imports and styles for Dream Team project with Sass and Javascript.
 
 ## Initialize the project
 Make sure you have installed in latest version :
-- Node
-- Visual Studio Code (or any IDE of your choice)
-- Git bash
+- Node (required)
+- Git (required)
+- Visual Studio Code
 
 #### #1 Clone the repository
 HTTPS
