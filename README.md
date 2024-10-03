@@ -23,16 +23,16 @@ git clone https://github.com/fabienAstia/dream-team-bs.git
 ```
 
 #### #2 Install dependencies
-Run NPM 
+Open the project and run NPM 
 ```bash
 npm install
 ```
 
 ## Create a custom Bootstrap
 ### Sass
-Customize your Bootstrap styles by modifying or adding variables in the `custom.scss` file (location root : src/scss/custom.scss). 
+Customize Bootstrap by modifying variables/mixins in `custom.scss` (location root : src/scss/custom.scss). 
 
-Choose your Bootstrap modules in the `imports.scss` file (location root : src/scss/custom.scss).
+Choose your Bootstrap components in `imports.scss` (location root : src/scss/custom.scss).
 
 The project uses [Sass](https://www.npmjs.com/package/sass) (a distribution of Dart Sass) to compile and minify the CSS output. 
 
@@ -41,15 +41,15 @@ To compile and minify, run
 npm start
 ```
 
-This will update two files in the dist/ folder:
+This will update two files in the dist/ folder :
  - `custom-bs.css` : CSS version of all customs and imports
  - `custom-bs.min.css` : minified CSS version
 
-These files can be directly linked to your HTML to apply your style. Please, prefer to use the **minified version**.
+These files can be directly linked to HTML's <head> to apply the custom Bootstrap. Please, prefer to use the **minified version**.
 
-Now, the project is enter in watching mode. Every time you'll make a change in custom.scss, the code will be compiled and minified.
+Now, the project is entering watching mode. Every time you make a change in `custom.scss`, the code will be compiled and minified.
 
-*Tip : You can use the index.html file and go live (Live Server extension) to see changes.*
+*Tip : You can use the index.html file and go live (Live Server extension in Visual Studio Code) to see changes.*
 
 ### Javascript
 Choose your Javascript modules in the `main.js` file (location root : src/js/main.js).
@@ -71,7 +71,7 @@ This method will output a minified JS file (like sass section). You can link it 
 *If you want to use the last Bootstrap version, follow this section.*
 
 In this option, the project uses [Rollup](https://www.npmjs.com/package/rollup) to compile and minify the JS output. 
-Popper/Core is include manually via CDN link.
+Popper/Core is **include manually via CDN link**.
 
 Make sure the following CDN is in HTML’s <head> (required placement : between min.css link and min.js link):
 ```html
@@ -85,13 +85,13 @@ Example
 <script type="module" src="../dist/dream-team-bs.umd.min.js"></script>
 ```
 
-Now, you can configure your javascript in `rollup.config.js` as you want or use the default configuration already in place.
+Now, you can configure the input/output javascript in `rollup.config.js` as you want or use the default configuration already in place.
 
 To bundle your imports and configuration, run :
 ```bash
 npm run build-bs
 ```
-As before, this will generate a minified JS file. You can link it to your head.
+As before, this will generate a minified JS file. You can link it to your HTML's <head>.
 
 ## Commands summary
 Use bash
