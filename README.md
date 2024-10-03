@@ -42,8 +42,8 @@ npm start
 ```
 
 This will update two files in the dist/ folder :
- - `custom-bs.css` : CSS version of all customs and imports
- - `custom-bs.min.css` : minified CSS version
+ - `dream-team-bs.css`  CSS version of all customs and imports
+ - `dream-team-bs.min.css`  minified CSS version
 
 These files can be directly linked to HTML's <head> to apply the custom Bootstrap. Please, prefer to use the **minified version**.
 
@@ -56,9 +56,10 @@ Choose your Javascript modules in the `main.js` file (location root : src/js/mai
 
 #### Option 1 : Esbuild (Popper bundled)
 *If you want to bundle Popper in your minified file, follow this section.*
+</br>
+</br>
 
-The project uses [esbuild](https://www.npmjs.com/package/sass) to compile and minify the JS output. 
-
+In this option, the project uses [Esbuild](https://www.npmjs.com/package/sass) to compile and minify the JS output. 
 EsBuild bundle the JavaScript with an **older version of Bootstrap**, which includes Popper.
 
 To compile and minify the Javascript, run
@@ -69,11 +70,13 @@ This method will output a minified JS file (like sass section). You can link it 
 
 #### Option 2 : Rollup (Popper CDN)
 *If you want to use the last Bootstrap version, follow this section.*
+</br>
+</br>
 
 In this option, the project uses [Rollup](https://www.npmjs.com/package/rollup) to compile and minify the JS output. 
 Popper/Core is **include manually via CDN link**.
 
-Make sure the following CDN is in HTML’s <head> (required placement : between min.css link and min.js link):
+Make sure the following CDN is in HTML’s <head> (required placement : between `dream-team-bs.min.css.min.css` link and the future `dream-team-bs.umd.min.js` script):
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 ```
