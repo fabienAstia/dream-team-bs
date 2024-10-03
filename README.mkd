@@ -8,6 +8,7 @@ Custom imports and styles for Dream Team project with Sass and Javascript.
 - [Create a custom Bootstrap](#create-a-custom-bootstrap)
    - [Sass](#sass)
    - [Javascript](#javascript)
+- [Commands resume](#commands-resume)
 
 ## Initialize the project
 Make sure you have installed in latest version :
@@ -19,11 +20,6 @@ Make sure you have installed in latest version :
 HTTPS
 ```bash
 https://github.com/fabienAstia/dream-team-bs.git
-```
-
-GitHub Cli
-```bash
-gh repo clone fabienAstia/dream-team-bs
 ```
 
 #### #2 Install dependencies
@@ -90,10 +86,18 @@ Place it between min.css link and min.js link.
 <script type="module" src="../dist/dream-team-bs.umd.min.js"></script>
 ```
 
-Now, you can choose the configuration that you need for your javascript in `rollup.config.js` or you can use the default configuration already in place.
+Now, you can choose the configuration you need for your javascript in `rollup.config.js` or you can use the default configuration already in place.
 
 To bundle your imports and configuration, run :
 ```bash
 npm run build-bs
 ```
-Like previously, this will output a minified JS file. You can link it to your header.
+As before, this will generate a minified JS file. You can link it to your head.
+
+## Commands resume
+With bash run
+ - `npm run start` Compiles Sass into CSS and watches changes
+ - `npm run build-js` Esbuild option - bundle with Popper (older Bootstrap)
+ - `npm run build-bs` Rollup option - using CDN for Popper (last Bootstrap)
+
+At any time, you can modify commands in `package.json`
