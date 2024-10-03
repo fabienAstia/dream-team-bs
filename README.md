@@ -19,7 +19,7 @@ Make sure you have installed in latest version :
 #### #1 Clone the repository
 HTTPS
 ```bash
-https://github.com/fabienAstia/dream-team-bs.git
+git clone https://github.com/fabienAstia/dream-team-bs.git
 ```
 
 #### #2 Install dependencies
