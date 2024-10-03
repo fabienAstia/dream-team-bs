@@ -73,20 +73,19 @@ This method will output a minified JS file (like sass section). You can link it 
 In this option, the project uses [Rollup](https://www.npmjs.com/package/rollup) to compile and minify the JS output. 
 Popper/Core is include manually via CDN link.
 
-First, add the following CDN to your HTML’s <head> :
-```
+Make sure the following CDN is in HTML’s <head> (required placement : between min.css link and min.js link):
+```html
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 ```
-Place it between min.css link and min.js link.
 
-<head> should look like :
-```
+Example
+```html
 <link rel="stylesheet" href="../dist/dream-team-bs.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script type="module" src="../dist/dream-team-bs.umd.min.js"></script>
 ```
 
-Now, you can choose the configuration you need for your javascript in `rollup.config.js` or you can use the default configuration already in place.
+Now, you can configure your javascript in `rollup.config.js` as you want or use the default configuration already in place.
 
 To bundle your imports and configuration, run :
 ```bash
