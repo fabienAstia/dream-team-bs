@@ -95,7 +95,7 @@ npm run build-bs
 As before, this will generate a minified JS file. You can link it to your head.
 
 ## Commands summary
-With bash run
+Use bash
  - `npm run start` Compiles Sass into CSS and watches changes
  - `npm run build-js` Esbuild option - bundle with Popper (older Bootstrap)
  - `npm run build-bs` Rollup option - using CDN for Popper (last Bootstrap)
