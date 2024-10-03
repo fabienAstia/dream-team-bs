@@ -69,7 +69,7 @@ To compile and minify the Javascript, run
 ```bash
 npm run build-js
 ```
-This method will output a minified JS file. You can link it to your header. However, note that this method works only with an older version of Bootstrap since Popper is no longer bundled with the latest version. 
+This method will output a minified JS file (like sass section). You can link it to your header. However, note that this method works only with an older version of Bootstrap since Popper is no longer bundled with the latest version. 
 
 #### Option 2 : Rollup (Popper CDN)
 *If you want to use the last Bootstrap version, follow this section.*
@@ -77,16 +77,23 @@ This method will output a minified JS file. You can link it to your header. Howe
 In this option, the project uses [Rollup](https://www.npmjs.com/package/rollup) to compile and minify the JS output. 
 Popper/Core is include manually via CDN link.
 
-First, add the following CDN to your HTML’s <head>:
+First, add the following CDN to your HTML’s <head> :
 ```
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 ```
 Place it between min.css link and min.js link.
 
-Header should look like :
+<head> should look like :
 ```
 <link rel="stylesheet" href="../dist/dream-team-bs.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script type="module" src="../dist/dream-team-bs.umd.min.js"></script>
 ```
 
+Now, you can choose the configuration that you need for your javascript in `rollup.config.js` or you can use the default configuration already in place.
+
+To bundle your imports and configuration, run :
+```bash
+npm run build-bs
+```
+Like previously, this will output a minified JS file. You can link it to your header.
