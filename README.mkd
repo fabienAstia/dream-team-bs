@@ -8,7 +8,7 @@ Custom imports and styles for Dream Team project with Sass and Javascript.
 - [Create a custom Bootstrap](#create-a-custom-bootstrap)
    - [Sass](#sass)
    - [Javascript](#javascript)
-- [Commands resume](#commands-resume)
+- [Commands summary](#commands-summary)
 
 ## Initialize the project
 Make sure you have installed in latest version :
@@ -94,7 +94,7 @@ npm run build-bs
 ```
 As before, this will generate a minified JS file. You can link it to your head.
 
-## Commands resume
+## Commands summary
 With bash run
  - `npm run start` Compiles Sass into CSS and watches changes
  - `npm run build-js` Esbuild option - bundle with Popper (older Bootstrap)
