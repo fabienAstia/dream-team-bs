@@ -1,7 +1,7 @@
 # dream-team-bs
 
 Welcome to Dream Team Bootstrap !
-Custom imports and styles for Dream Team project with Sass and Javascript.
+Custom Bootstrap imports and styles for Dream Team project (Sass and Javascript).
 
 ## Table of contents
 - [Initialize the project](#initialize-the-project)
@@ -36,16 +36,17 @@ Choose your Bootstrap components in `imports.scss` (location root : src/scss/cus
 
 The project uses [Sass](https://www.npmjs.com/package/sass) (a distribution of Dart Sass) to compile and minify the CSS output. 
 
-To compile and minify, run
+To compile, minify and watch changes, run
 ```bash
-npm start
+npm run build-css
 ```
 
-This will update two files in the dist/ folder :
+This will update 3 files in the dist/ folder :
  - `dream-team-bs.css`  CSS version of all customs and imports
  - `dream-team-bs.min.css`  minified CSS version
+ - `dream-team-bs.min.css.map`  mapping version - allow to link minify version to original (debug)
 
-These files can be directly linked to HTML's <head> to apply the custom Bootstrap. Please, prefer to use the **minified version**.
+The first two files can be directly linked to HTML's <head> to apply the custom Bootstrap. Please, prefer to use the **minified version**.
 
 Now, the project is entering watching mode. Every time you make a change in `custom.scss`, the code will be compiled and minified.
 
@@ -54,26 +55,8 @@ Now, the project is entering watching mode. Every time you make a change in `cus
 ### Javascript
 Choose your Javascript modules in the `main.js` file (location root : src/js/main.js).
 
-#### Option 1 : Esbuild (Popper bundled)
-*If you want to bundle Popper in your minified file, follow this section.*
-</br>
-</br>
-
-In this option, the project uses [Esbuild](https://www.npmjs.com/package/sass) to compile and minify the JS output. 
-EsBuild bundle the JavaScript with an **older version of Bootstrap**, which includes Popper.
-
-To compile and minify the Javascript, run
-```bash
-npm run build-js
-```
-This method will output a minified JS file (like sass section). You can link it to your header. However, note that this method works only with an older version of Bootstrap since Popper is no longer bundled with the latest version. 
-
-#### Option 2 : Rollup (Popper CDN)
-*If you want to use the last Bootstrap version, follow this section.*
-</br>
-</br>
-
-In this option, the project uses [Rollup](https://www.npmjs.com/package/rollup) to compile and minify the JS output. 
+#### Rollup (Popper CDN)
+The project uses [Rollup](https://www.npmjs.com/package/rollup) to compile and minify the JS output. 
 Popper/Core is **include manually via CDN link**.
 
 Make sure the following CDN is in HTML’s <head> (required placement : between `dream-team-bs.min.css.min.css` link and the future `dream-team-bs.umd.min.js` script):
@@ -92,14 +75,14 @@ Now, you can configure the input/output javascript in `rollup.config.js` as you 
 
 To bundle your imports and configuration, run :
 ```bash
-npm run build-bs
+npm run build-js
 ```
 As before, this will generate a minified JS file. You can link it to your HTML's <head>.
 
 ## Commands summary
 Use bash
- - `npm run start` Compiles Sass into CSS and watches changes
- - `npm run build-js` Esbuild option - bundle with Popper (older Bootstrap)
- - `npm run build-bs` Rollup option - using CDN for Popper (last Bootstrap)
+ - `npm run build-css` Compiles Sass into CSS and watches changes
+ - `npm run build-js` Import and minify js files with Rollup - using CDN for Popper
+ - `npm start` Run both command (js and css)
 
 At any time, you can modify commands in `package.json`
