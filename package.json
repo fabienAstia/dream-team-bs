@@ -6,7 +6,7 @@
   "scripts": {
     "build-css": "sass --no-source-map src/scss/main.scss:dist/dream-team-bs.css && sass --style=compressed --watch dist/dream-team-bs.css:dist/dream-team-bs.min.css",
     "build-js": "rollup --config",
-    "start": "npm run build-js && sass --style=compressed src/scss/main.scss:dist/dream-team-bs.min.css"
+    "start": "npm run rollup --config && npm run sass --style=compressed src/scss/main.scss:dist/dream-team-bs.min.css"
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4",
