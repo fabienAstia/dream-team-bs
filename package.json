@@ -9,7 +9,8 @@
     "start": "npm run build-js && sass --style=compressed src/scss/main.scss:dist/dream-team-bs.min.css"
   },
   "dependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "bootstrap": "^5.3.3",
-    "@rollup/plugin-terser": "^0.4.4"
+    "rollup": "^4.24.0"
   }
 }
