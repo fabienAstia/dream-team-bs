@@ -4,7 +4,7 @@ export default [
   {
     input: "./src/js/main.js",
     output: {
-      file: "dist/dream-team-bs.umd.js",
+      file: "./src/js/dream-team-bs.umd.js",
       format: "umd",
       name: "dream-team-bs",
       esModule: false,
@@ -16,7 +16,7 @@ export default [
     external: ["@popperjs/core"]
   },
   {
-    input: "./dist/dream-team-bs.umd.js",
+    input: "./src/js/dream-team-bs.umd.js",
     output: {
       file: "dist/dream-team-bs.umd.min.js",
       format: "umd",
